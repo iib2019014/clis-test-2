@@ -1,0 +1,91 @@
+@import url('./variables.css');
+
+
+main {
+    min-height: 100vh;
+}
+
+.top-bar-fixed {
+    width: 100%;
+    height: var(--topbar-height);
+    background-color: var(--grey-100);
+
+    padding-top: 1rem;
+}
+
+.site-head {
+    display: flex;
+}
+
+.toggle-logo {
+    width: var(--sidebar-width);
+    /* height: var(--topbar-height); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.toggler {
+    width: 6rem;
+    font-size: 2.5rem;
+
+    border: none;
+    background: none;
+
+    border: .1rem solid var(--grey-300);
+    border-left: .5rem solid var(--grey-300);
+    border-right: .5rem solid var(--grey-300);
+
+    border-radius: 5px;
+
+    font-weight: 900;
+    color: var(--light-blue-1);
+    /* background-color: rgb(99, 145, 206); */
+    font-family: var(--font-lobster);
+}
+
+.site-title {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-bree);
+    color: var(--grey-600);
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    width: 8rem;
+    display: flex;
+    padding: .2rem .5rem;
+    margin: 1rem 0;
+    background-color: var(--grey-300);
+    border-radius: 2px;
+
+    font-family: var(--font-bree);
+}
+
+
+.item-text {
+    flex: 2;
+    font-size: 1.1rem;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.item-icon {
+    flex: 1;
+    font-size: 1.5rem;
+    text-align: right;
+    /* border: 1px solid red; */
+
+
+
+    display: none;
+}
