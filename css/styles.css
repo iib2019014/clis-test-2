@@ -10,11 +10,15 @@ main {
     height: var(--topbar-height);
     background-color: var(--grey-100);
 
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 .site-head {
     display: flex;
+
+    padding: .5rem 0;
+
+    box-shadow: 0 1px 5px var(--grey-400);
 }
 
 .toggle-logo {
@@ -69,6 +73,11 @@ main {
     border-radius: 2px;
 
     font-family: var(--font-bree);
+}
+
+.nav-item-active {
+    color: var(--grey-300);
+    background-color: var(--grey-600);
 }
 
 
