@@ -5,6 +5,8 @@
     min-height: 100vh;
     margin: auto;
     margin-top: var(--topbar-height);
+
+    padding: 1rem 0;
 }
 
 
