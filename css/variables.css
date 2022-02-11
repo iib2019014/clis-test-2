@@ -3,11 +3,12 @@
 
 :root {
     --sidebar-width: 12rem;
-    --body-margin-left: 12.5rem;
-    --sidenav-collapse-left: -8.5rem;
-    --adjust-body-margin-left: 4rem;
+    --body-margin-top: var(--topbar-height);
+    --adjust-body-margin-top: 5rem;
     --nav-collapse-time: .5s;
-    --topbar-height: 20vh;
+    --topbar-height: 10rem;
+    --navbar-height: 5rem;
+    --navbar-height-negative: -5rem;
     --body-minheight: 92vh;
     --font-bree: 'Bree Serif', serif;
     --font-lobster: 'Lobster', cursive;

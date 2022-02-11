@@ -1,24 +1,29 @@
 toggler = document.querySelector(".toggler");
 navbar = document.querySelector(".navbar");
-content = document.querySelector(".content");
+content = document.querySelector(".site-body");
+topbar = document.querySelector(".top-bar-fixed");
 
 navbar_status = true;
 
 toggler.addEventListener("click", function(event) {
     if(navbar_status) {
         navbar.classList.add("navbar-collapse");
-        content.classList.add("content-adjust");
+        topbar.classList.add("top-bar-adjust");
+        content.classList.add("site-body-adjust");
         navbar.classList.remove("navbar-un-collapse");
-        content.classList.remove("content-un-adjust");
+        topbar.classList.remove("top-bar-un-adjust");
+        content.classList.remove("site-body-un-adjust");
 
         navbar_status = false;
     }
 
     else {
         navbar.classList.add("navbar-un-collapse");
-        content.classList.add("content-un-adjust");
+        topbar.classList.add("top-bar-un-adjust");
+        content.classList.add("site-body-un-adjust");
         navbar.classList.remove("navbar-collapse");
-        content.classList.remove("content-adjust");
+        topbar.classList.remove("top-bar-adjust");
+        content.classList.remove("site-body-adjust");
 
         navbar_status = true;
     }

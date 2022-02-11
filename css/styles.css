@@ -3,9 +3,12 @@
 
 main {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .top-bar-fixed {
+    position: fixed;
     width: 100%;
     height: var(--topbar-height);
     background-color: var(--grey-100);
@@ -19,15 +22,16 @@ main {
     padding: .5rem 0;
 
     box-shadow: 0 1px 5px var(--grey-400);
+
+    /* if we don't keep bg-clr, the navbar will be visible when moved up */
+    background-color: var(--grey-100);
 }
 
 .toggle-logo {
     width: var(--sidebar-width);
-    /* height: var(--topbar-height); */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid blue; */
 }
 
 .toggler {
@@ -45,7 +49,6 @@ main {
 
     font-weight: 900;
     color: var(--light-blue-1);
-    /* background-color: rgb(99, 145, 206); */
     font-family: var(--font-lobster);
 }
 
@@ -57,18 +60,80 @@ main {
 }
 
 .navbar {
+    position: relative;
     width: 80%;
+    height: var(--navbar-height);
     margin: auto;
 
     display: flex;
     justify-content: space-between;
+
+    z-index: -1;
+}
+
+
+
+@keyframes collapse-navbar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: var(--navbar-height-negative);
+    }
+}
+
+.navbar-collapse {
+    animation: collapse-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-collapse-navbar {
+    0% {
+        top: var(--navbar-height-negative);
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.navbar-un-collapse {
+    animation: un-collapse-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes adjust-top-bar {
+    0% {
+        height: var(--topbar-height);
+    }
+
+    100% {
+        height: var(--navbar-height);
+    }
+}
+
+.top-bar-adjust {
+    animation: adjust-top-bar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-adjust-top-bar {
+    0% {
+        height: var(--navbar-height);
+    }
+
+    100% {
+        height: var(--topbar-height);
+    }
+}
+
+.top-bar-un-adjust {
+    animation: un-adjust-top-bar var(--nav-collapse-time) ease-in-out forwards;
 }
 
 .nav-item {
     width: 8rem;
     display: flex;
     padding: .2rem .5rem;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     background-color: var(--grey-300);
     border-radius: 2px;
 
