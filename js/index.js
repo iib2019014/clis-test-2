@@ -1,6 +1,6 @@
 toggler = document.querySelector(".toggler");
 navbar = document.querySelector(".navbar");
-content = document.querySelector(".site-body");
+sitebody = document.querySelector(".site-body");
 topbar = document.querySelector(".top-bar-fixed");
 
 navbar_status = true;
@@ -9,10 +9,10 @@ toggler.addEventListener("click", function(event) {
     if(navbar_status) {
         navbar.classList.add("navbar-collapse");
         topbar.classList.add("top-bar-adjust");
-        content.classList.add("site-body-adjust");
+        sitebody.classList.add("site-body-adjust");
         navbar.classList.remove("navbar-un-collapse");
         topbar.classList.remove("top-bar-un-adjust");
-        content.classList.remove("site-body-un-adjust");
+        sitebody.classList.remove("site-body-un-adjust");
 
         navbar_status = false;
     }
@@ -20,10 +20,10 @@ toggler.addEventListener("click", function(event) {
     else {
         navbar.classList.add("navbar-un-collapse");
         topbar.classList.add("top-bar-un-adjust");
-        content.classList.add("site-body-un-adjust");
+        sitebody.classList.add("site-body-un-adjust");
         navbar.classList.remove("navbar-collapse");
         topbar.classList.remove("top-bar-adjust");
-        content.classList.remove("site-body-adjust");
+        sitebody.classList.remove("site-body-adjust");
 
         navbar_status = true;
     }
