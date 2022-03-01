@@ -1,0 +1,38 @@
+.carousel {
+    width: 60%;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.slide-show {
+    border: 1px solid red;
+
+    overflow-x: hidden;
+}
+
+.slider {
+    margin: auto;
+    border: 1px solid red;
+
+    display: flex;
+
+    position: relative;
+}
+
+.slider-item-img {
+    margin: auto;
+}
+
+@keyframes slider-move {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.move-slider {
+    animation: slider-move 2s ease-in-out forwards;
+}

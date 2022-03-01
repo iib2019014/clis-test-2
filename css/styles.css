@@ -16,6 +16,30 @@ main {
     /* padding-top: 1rem; */
 }
 
+.iiita-header {
+    height: var(--iiita-header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--grey-100);
+    background-color: var(--grey-700);
+
+}
+
+.iiita-logo-img-1 {
+    width: 10rem;
+}
+
+.iiita-name > h4 {
+    text-align: center;
+    font-family: var(--font-bree);
+}
+
+.iiita-name > h4:last-child {
+    font-family: var(--font-poppins);
+}
+
 .site-head {
     display: flex;
 
@@ -32,6 +56,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid var(--grey-300); */
 }
 
 .toggler {
@@ -57,7 +82,22 @@ main {
     text-align: center;
     font-family: var(--font-bree);
     color: var(--grey-600);
+    /* border: 1px solid var(--grey-300); */
 }
+
+.search-bar {
+    width: 24rem;
+    /* border: 1px solid var(--grey-300); */
+}
+
+.search-bar button {
+    border: none;
+    background-color: var(--grey-600);
+}
+
+/* .search-bar > input:active {
+    outline: none;
+} */
 
 .navbar {
     position: relative;
@@ -107,7 +147,7 @@ main {
     }
 
     100% {
-        height: var(--navbar-height);
+        height: var(--topbar-collapse-height);
     }
 }
 
@@ -117,7 +157,7 @@ main {
 
 @keyframes un-adjust-top-bar {
     0% {
-        height: var(--navbar-height);
+        height: var(--topbar-collapse-height);
     }
 
     100% {

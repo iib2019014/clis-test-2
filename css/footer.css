@@ -36,8 +36,12 @@ footer {
     color: var(--light-blue-1);
     font-size: 1.5rem;
     font-family: var(--font-bree);
-    text-transform: uppercase;
-    letter-spacing: .1rem;
+    /* text-transform: uppercase; */
+    /* letter-spacing: .1rem; */
+}
+
+.name > h4:last-child {
+    font-family: var(--font-poppins);
 }
 
 .bottom-clis {

@@ -5,8 +5,8 @@ topbar = document.querySelector(".top-bar-fixed");
 
 navbar_status = true;
 
-toggler.addEventListener("click", function(event) {
-    if(navbar_status) {
+toggler.addEventListener("click", function (event) {
+    if (navbar_status) {
         navbar.classList.add("navbar-collapse");
         topbar.classList.add("top-bar-adjust");
         sitebody.classList.add("site-body-adjust");
@@ -44,7 +44,7 @@ active_nav_item.classList.add("nav-item-active")
 
 function removeOthers(all_tabs, current) {
     all_tabs.forEach(function (tab) {
-        if(tab != current) {
+        if (tab != current) {
             tab.classList.remove("tab-active");
             sec = document.getElementById(tab.classList[1]);
             sec.classList.remove("section-active");
