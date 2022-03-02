@@ -65,3 +65,29 @@ section_tabs.forEach(function (tab) {
         section.classList.add("section-active");
     })
 })
+
+
+reveal_tab_heads = document.querySelectorAll(".reveal-tab-head");
+tab_details_status = false;
+
+reveal_tab_heads.forEach((reveal_tab_head) => {
+    reveal_tab_head.addEventListener("click", function (event) {
+        reveal_tab_details = reveal_tab_head.nextSibling.nextSibling;
+        
+        if(!tab_details_status) {
+            reveal_tab_details.classList.add("tab-details-reveal");
+            setTimeout(() => {
+                reveal_tab_details.classList.remove("tab-details-un-reveal");
+            });
+            tab_details_status = true;
+        }
+
+        else {
+            reveal_tab_details.classList.add("tab-details-un-reveal");
+            setTimeout(() => {
+                reveal_tab_details.classList.remove("tab-details-reveal");
+            });
+            tab_details_status = false;
+        }
+    })
+})

@@ -26,7 +26,17 @@
     --adjust-body-margin-top: var(--topbar-collapse-height);
 
 
+    --curriculum-tabs-reveal-height: 30rem;
+    --syllabus-tabs-reveal-height: 30rem;
+    --tab-reveal-height: 30rem;
+
+
+    /* times */
+    
     --nav-collapse-time: .5s;
+    --curriculum-tabs-reveal-time: .5s;
+    --syllabus-tabs-reveal-time: .5s;
+    --tab-reveal-time: .5s;
     
 
     /* fonts */

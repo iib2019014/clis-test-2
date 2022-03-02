@@ -1,0 +1,23 @@
+mtech_curriculum_head = document.querySelector("#mtech-curriculum > h5");
+curriculum_details = document.querySelector("#curriculum-details");
+
+curriculum_status = false;
+
+mtech_curriculum_head.addEventListener("click", function(event) {
+    if (!curriculum_status) {
+        curriculum_details.classList.add("curriculum-details-reveal");
+        setTimeout(() => {
+            curriculum_details.classList.remove("curriculum-details-un-reveal");
+        })
+        curriculum_status = true;
+    }
+
+    else {
+        curriculum_details.classList.add("curriculum-details-un-reveal");
+        setTimeout(() => {
+            curriculum_details.classList.remove("curriculum-details-reveal");
+        })
+        curriculum_status = false;
+    }
+})
+
