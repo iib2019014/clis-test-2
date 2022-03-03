@@ -60,5 +60,26 @@
 
 .syllabus-course-plan {
     overflow-y: scroll;
-    /* padding: 1rem; */
+    padding: 1rem;
+}
+
+.syllabus-details-tab {
+    width: 90%;
+    margin: auto;
+
+    box-shadow: 2px 2px 30px 1px var(--grey-300);
+}
+
+.syllabus-course-objective {
+    padding: .5rem;
+    border-bottom: 1px solid var(--grey-500);
+}
+
+.syllabus-course-outcomes {
+    padding: .5rem;
+    border-bottom: 1px solid var(--grey-500);
+}
+
+.syllabus-course-plan-table {
+    padding: .5rem;
 }
