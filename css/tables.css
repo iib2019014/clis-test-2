@@ -38,3 +38,27 @@
     font-weight: bold;
     color: #009879;
 }
+
+.component-td {
+    width: 8rem;
+    /* display: none; */
+}
+
+.unit-td {
+    width: 5rem;
+}
+
+
+.syllabus-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grey-200);
+    background-color: var(--grey-700);
+    padding: .4rem;
+    cursor: pointer;
+}
+
+.syllabus-course-plan {
+    overflow-y: scroll;
+    /* padding: 1rem; */
+}

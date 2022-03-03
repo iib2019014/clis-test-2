@@ -68,18 +68,17 @@ section_tabs.forEach(function (tab) {
 
 
 reveal_tab_heads = document.querySelectorAll(".reveal-tab-head");
-tab_details_status = false;
+// tab_details_status = false;
 
 reveal_tab_heads.forEach((reveal_tab_head) => {
     reveal_tab_head.addEventListener("click", function (event) {
         reveal_tab_details = reveal_tab_head.nextSibling.nextSibling;
-        
-        if(!tab_details_status) {
+
+        if(reveal_tab_details.classList.contains("tab-details-un-reveal")) {
             reveal_tab_details.classList.add("tab-details-reveal");
             setTimeout(() => {
                 reveal_tab_details.classList.remove("tab-details-un-reveal");
             });
-            tab_details_status = true;
         }
 
         else {
@@ -87,7 +86,30 @@ reveal_tab_heads.forEach((reveal_tab_head) => {
             setTimeout(() => {
                 reveal_tab_details.classList.remove("tab-details-reveal");
             });
-            tab_details_status = false;
+        }
+    })
+})
+
+syllabus_headers = document.querySelectorAll(".syllabus-header");
+
+syllabus_headers.forEach((syllabus_header) => {
+    syllabus_header.addEventListener("click", function (event) {
+        syllabus_header_details = syllabus_header.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling;
+        // console.log(syllabus_header_details);
+        console.log(syllabus_header_details.classList);
+
+        if(syllabus_header_details.classList.contains("tab-details-un-reveal")) {
+            syllabus_header_details.classList.add("tab-details-reveal");
+            setTimeout(() => {
+                syllabus_header_details.classList.remove("tab-details-un-reveal");
+            });
+        }
+
+        else {
+            syllabus_header_details.classList.add("tab-details-un-reveal");
+            setTimeout(() => {
+                syllabus_header_details.classList.remove("tab-details-reveal");
+            });
         }
     })
 })
