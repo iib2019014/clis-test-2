@@ -22,6 +22,34 @@ main {
     /* padding-top: 1rem; */
 }
 
+@keyframes shrink-top-bar-fixed {
+    0% {
+        height: var(--topbar-height);
+    }
+
+    100% {
+        height: var(--topbar-shrink-height);
+    }
+}
+
+.top-bar-fixed-shrink {
+    animation: shrink-top-bar-fixed .5s ease-in-out forwards;
+}
+
+@keyframes expand-top-bar-fixed {
+    0% {
+        height: var(--topbar-shrink-height);
+    }
+
+    100% {
+        height: var(--topbar-height);
+    }
+}
+
+.top-bar-fixed-expand {
+    animation: expand-top-bar-fixed .5s ease-in-out forwards;
+}
+
 .iiita-header {
     height: var(--iiita-header-height);
     display: flex;
@@ -30,11 +58,66 @@ main {
 
     color: var(--grey-100);
     background-color: var(--grey-700);
+}
 
+@keyframes shrink-iiita-header {
+    0% {
+        height: var(--iiita-header-height);
+    }
+
+    100% {
+        height: var(--iiita-header-shrink-height);
+    }
+}
+
+.iiita-header-shrink {
+    animation: shrink-iiita-header .5s ease-in-out forwards;
+}
+
+@keyframes expand-iiita-header {
+    0% {
+        height: var(--iiita-header-shrink-height);
+    }
+
+    100% {
+        height: var(--iiita-header-height);
+    }
+}
+
+.iiita-header-expand {
+    animation: expand-iiita-header .5s ease-in-out forwards;
 }
 
 .iiita-logo-img-1 {
     width: 10rem;
+}
+
+@keyframes shrink-iiita-logo {
+    0% {
+        width: 10rem;
+    }
+
+    100% {
+        width: 5rem;
+    }
+}
+
+.iiita-logo-shrink {
+    animation: shrink-iiita-logo .5s ease-in-out forwards;
+}
+
+@keyframes expand-iiita-logo {
+    0% {
+        width: 5rem;
+    }
+
+    100% {
+        width: 10rem;
+    }
+}
+
+.iiita-logo-expand {
+    animation: expand-iiita-logo .5s ease-in-out forwards;
 }
 
 .iiita-name > h4 {

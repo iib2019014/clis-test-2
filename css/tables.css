@@ -52,6 +52,7 @@
 .syllabus-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: var(--grey-200);
     background-color: var(--grey-700);
     padding: .4rem;

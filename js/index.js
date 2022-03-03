@@ -4,26 +4,49 @@ sitebody = document.querySelector(".site-body");
 topbar = document.querySelector(".top-bar-fixed");
 
 navbar_status = true;
+topbar_shrunk = false;
 
 toggler.addEventListener("click", function (event) {
     if (navbar_status) {
-        navbar.classList.add("navbar-collapse");
-        topbar.classList.add("top-bar-adjust");
-        sitebody.classList.add("site-body-adjust");
-        navbar.classList.remove("navbar-un-collapse");
-        topbar.classList.remove("top-bar-un-adjust");
-        sitebody.classList.remove("site-body-un-adjust");
+        if(topbar_shrunk) {
+            navbar.classList.add("navbar-collapse--shrunk");
+            topbar.classList.add("top-bar-adjust--shrunk");
+            sitebody.classList.add("site-body-adjust--shrunk");
+            navbar.classList.remove("navbar-un-collapse--shrunk");
+            topbar.classList.remove("top-bar-un-adjust--shrunk");
+            sitebody.classList.remove("site-body-un-adjust--shrunk");
+        }
+
+        else {
+            navbar.classList.add("navbar-collapse");
+            topbar.classList.add("top-bar-adjust");
+            sitebody.classList.add("site-body-adjust");
+            navbar.classList.remove("navbar-un-collapse");
+            topbar.classList.remove("top-bar-un-adjust");
+            sitebody.classList.remove("site-body-un-adjust");
+        }
 
         navbar_status = false;
     }
 
     else {
-        navbar.classList.add("navbar-un-collapse");
-        topbar.classList.add("top-bar-un-adjust");
-        sitebody.classList.add("site-body-un-adjust");
-        navbar.classList.remove("navbar-collapse");
-        topbar.classList.remove("top-bar-adjust");
-        sitebody.classList.remove("site-body-adjust");
+        if(topbar_shrunk) {
+            navbar.classList.add("navbar-un-collapse--shrunk");
+            topbar.classList.add("top-bar-un-adjust--shrunk");
+            sitebody.classList.add("site-body-un-adjust--shrunk");
+            navbar.classList.remove("navbar-collapse--shrunk");
+            topbar.classList.remove("top-bar-adjust--shrunk");
+            sitebody.classList.remove("site-body-adjust--shrunk");
+        }
+
+        else {
+            navbar.classList.add("navbar-un-collapse");
+            topbar.classList.add("top-bar-un-adjust");
+            sitebody.classList.add("site-body-un-adjust");
+            navbar.classList.remove("navbar-collapse");
+            topbar.classList.remove("top-bar-adjust");
+            sitebody.classList.remove("site-body-adjust");
+        }
 
         navbar_status = true;
     }
@@ -112,4 +135,46 @@ syllabus_headers.forEach((syllabus_header) => {
             });
         }
     })
+})
+
+
+// scrolling js
+iiita_logo_1 = document.querySelector(".iiita-logo-img-1");
+iiita_header = document.querySelector(".iiita-header");
+
+window.addEventListener('scroll', function (event) {
+    // console.log("window scrolled")
+
+    let scrollY = window.scrollY;
+    // if not used let, then scrollY is bot changing,
+
+    // console.log(window.scrollY)
+
+    if(scrollY >= 325) {
+        // console.log(iiita_logo_1.classList);
+        iiita_logo_1.classList.add("iiita-logo-shrink");
+        iiita_logo_1.classList.remove("iiita-logo-expand");
+
+        // console.log(iiita_header.classList);
+        iiita_header.classList.add("iiita-header-shrink");
+        iiita_header.classList.remove("iiita-header-expand");
+
+        topbar.classList.add("top-bar-fixed-shrink");
+        topbar.classList.remove("top-bar-fixed-expand");
+
+        // document.documentElement.style.setProperty("--topbar-collapse-shrink-height", "10rem");
+    }
+
+    else {
+        iiita_logo_1.classList.add("iiita-logo-expand");
+        iiita_logo_1.classList.remove("iiita-logo-shrink");
+
+        iiita_header.classList.add("iiita-header-expand");
+        iiita_header.classList.remove("iiita-header-shrink");
+
+        topbar.classList.add("top-bar-fixed-expand");
+        topbar.classList.remove("top-bar-fixed-shrink");
+
+        // document.documentElement.style.setProperty("--topbar-collapse-shrink-height", "15rem");
+    }
 })
