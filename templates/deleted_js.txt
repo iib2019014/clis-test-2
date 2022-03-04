@@ -1,0 +1,64 @@
+mtech_curriculum_head = document.querySelector("#mtech-curriculum > h5");
+curriculum_details = document.querySelector("#curriculum-details");
+
+curriculum_status = false;
+
+mtech_curriculum_head.addEventListener("click", function(event) {
+    if (!curriculum_status) {
+        curriculum_details.classList.add("curriculum-details-reveal");
+        setTimeout(() => {
+            curriculum_details.classList.remove("curriculum-details-un-reveal");
+        })
+        curriculum_status = true;
+    }
+
+    else {
+        curriculum_details.classList.add("curriculum-details-un-reveal");
+        setTimeout(() => {
+            curriculum_details.classList.remove("curriculum-details-reveal");
+        })
+        curriculum_status = false;
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+if(topbar_shrink) {
+    topbar.classList.add("top-bar-adjust--shrink");
+    topbar.classList.remove("top-bar-un-adjust--shrink");
+}
+
+else {
+    topbar.classList.add("top-bar-adjust");
+    topbar.classList.remove("top-bar-un-adjust");
+}
+
+if(topbar_shrink) {
+    topbar.classList.add("top-bar-un-adjust--shrink");
+    topbar.classList.remove("top-bar-adjust--shrink");
+}
+
+else {
+    topbar.classList.add("top-bar-un-adjust");
+    topbar.classList.remove("top-bar-adjust");
+}
+
+setTimeout(() => {
+//     $(':root').css("--topbar-collapse-height", "10rem");
+//     $(':root').css("--topbar-height", "15rem");
+// }, 500);
+
+setTimeout(() => {
+//     $(':root').css("--topbar-collapse-height", "15rem");
+//     $(':root').css("--topbar-height", "20rem");
+// }, 500);
+

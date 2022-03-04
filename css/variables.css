@@ -9,21 +9,32 @@
     --sidebar-width: 12rem;
 
 
-    --topbar-height: 20rem;
-    --topbar-shrink-height: 15rem;
-    /* = iiita-header-height + navbar-height */
+    --topbar-height: 14rem;
+    /* = iiita-header-height + navbar-height + site-head-height */
+    --topbar-shrink-height: 11rem;
+    /* = iiita-header-shrink-height + navbar-height + site-head-height */
     
-    --topbar-collapse-height: 15rem;
-    --topbar-collapse-shrink-height: 10rem;
+    --topbar-collapse-height: 11rem;
     /* = topbar-height - navbar-height */
+    --topbar-collapse-shrink-height: 8rem;
+    /* = topbar-shrink-height - navbar-height */
 
 
-    --iiita-header-height: 10rem;
+    --site-head-height: 3rem;
+
+
+    --iiita-header-height: 8rem;
     --iiita-header-shrink-height: 5rem;
 
 
-    --navbar-height: 5rem;
-    --navbar-height-negative: -5rem;
+    --navbar-height: 3rem;
+    --navbar-height-negative: -3rem;
+
+    --iiita-logo-width: 8rem;
+    --iiita-logo-shrink-width: 5rem;
+
+    --iiita-name-font-size: 1.5rem;
+    --iiita-name-shrink-font-size: 1.2rem;
 
 
     --body-minheight: 92vh;

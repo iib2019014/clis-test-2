@@ -1,0 +1,281 @@
+<link rel="stylesheet" href="../css/carousel.css">
+@keyframes adjust-site-body {
+    0% {
+        margin-top: var(--body-margin-top);
+    }
+
+    100% {
+        margin-top: var(--adjust-body-margin-top);
+    }
+}
+
+.site-body-adjust {
+    animation: adjust-site-body var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-adjust-site-body {
+    0% {
+        margin-top: var(--adjust-body-margin-top);
+    }
+
+    100% {
+        margin-top: var(--body-margin-top);
+    }
+}
+
+.site-body-un-adjust {
+    animation: un-adjust-site-body var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes collapse-shrink-navbar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: var(--navbar-height-negative);
+    }
+}
+
+.navbar-collapse-shrink {
+    animation: collapse-shrink-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-collapse-shrink-navbar {
+    0% {
+        top: var(--navbar-height-negative);
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.navbar-un-collapse-shrink {
+    animation: un-collapse-shrink-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+
+@keyframes adjust-shrink-top-bar {
+    0% {
+        height: var(--topbar-shrink-height);
+    }
+
+    100% {
+        height: var(--topbar-collapse-shrink-height);
+    }
+}
+
+.top-bar-adjust-shrink {
+    animation: adjust-shrink-top-bar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-adjust-shrink-top-bar {
+    0% {
+        height: var(--topbar-collapse-shrink-height);
+    }
+
+    100% {
+        height: var(--topbar-shrink-height);
+    }
+}
+
+@keyframes shrink-top-bar-fixed {
+    0% {
+        height: var(--topbar-height);
+    }
+
+    100% {
+        height: var(--topbar-shrink-height);
+    }
+}
+
+.top-bar-fixed-shrink {
+    animation: shrink-top-bar-fixed .5s ease-in-out forwards;
+}
+
+@keyframes expand-top-bar-fixed {
+    0% {
+        height: var(--topbar-shrink-height);
+    }
+
+    100% {
+        height: var(--topbar-height);
+    }
+}
+
+.top-bar-fixed-expand {
+    animation: expand-top-bar-fixed .5s ease-in-out forwards;
+}
+
+@keyframes shrink-iiita-header {
+    0% {
+        height: var(--iiita-header-height);
+    }
+
+    100% {
+        height: var(--iiita-header-shrink-height);
+    }
+}
+
+.iiita-header-shrink {
+    animation: shrink-iiita-header .5s ease-in-out forwards;
+}
+
+@keyframes expand-iiita-header {
+    0% {
+        height: var(--iiita-header-shrink-height);
+    }
+
+    100% {
+        height: var(--iiita-header-height);
+    }
+}
+
+.iiita-header-expand {
+    animation: expand-iiita-header .5s ease-in-out forwards;
+}
+
+@keyframes shrink-iiita-logo {
+    0% {
+        width: var(--iiita-logo-width);
+    }
+
+    100% {
+        width: var(--iiita-logo-shrink-width);
+    }
+}
+
+.iiita-logo-shrink {
+    animation: shrink-iiita-logo .5s ease-in-out forwards;
+}
+
+@keyframes expand-iiita-logo {
+    0% {
+        width: var(--iiita-logo-shrink-width);
+    }
+
+    100% {
+        width: var(--iiita-logo-width);
+    }
+}
+
+.iiita-logo-expand {
+    animation: expand-iiita-logo .5s ease-in-out forwards;
+}
+
+@keyframes shrink-iiita-name {
+    0% {
+        font-size: var(--iiita-name-font-size);
+    }
+
+    100% {
+        font-size: var(--iiita-name-shrink-font-size);
+    }
+}
+
+.iiita-name-shrink {
+    animation: shrink-iiita-name .5s ease-in-out forwards;
+}
+
+@keyframes expand-iiita-name {
+    0% {
+        font-size: 1.2rem;
+    }
+
+    100% {
+        font-size: 1.5rem;
+    }
+}
+
+.iiita-name-expand {
+    animation: expand-iiita-name .5s ease-in-out forwards;
+}
+
+@keyframes collapse-navbar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: var(--navbar-height-negative);
+    }
+}
+
+.navbar-collapse {
+    animation: collapse-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-collapse-navbar {
+    0% {
+        top: var(--navbar-height-negative);
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.navbar-un-collapse {
+    animation: un-collapse-navbar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes adjust-top-bar {
+    0% {
+        height: var(--topbar-height);
+    }
+
+    100% {
+        height: var(--topbar-collapse-height);
+    }
+}
+
+.top-bar-adjust {
+    animation: adjust-top-bar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes un-adjust-top-bar {
+    0% {
+        height: var(--topbar-collapse-height);
+    }
+
+    100% {
+        height: var(--topbar-height);
+    }
+}
+
+.top-bar-un-adjust {
+    animation: un-adjust-top-bar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+.top-bar-un-adjust-shrink {
+    animation: un-adjust-shrink-top-bar var(--nav-collapse-time) ease-in-out forwards;
+}
+
+@keyframes reveal-tab-details {
+    0% {
+        height: 0rem;
+    }
+
+    100% {
+        height: var(--tab-reveal-height);
+    }
+}
+
+.tab-details-reveal {
+    animation: reveal-tab-details var(--tab-reveal-time) ease-in-out forwards;
+}
+
+@keyframes un-reveal-tab-details {
+    0% {
+        height: var(--tab-reveal-height);
+    }
+
+    100% {
+        height: 0rem;
+    }
+}
+
+.tab-details-un-reveal {
+    animation: un-reveal-tab-details var(--tab-reveal-time) ease-in-out forwards;
+}
